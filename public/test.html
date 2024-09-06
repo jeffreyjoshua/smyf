@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>REF2k24</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <style>
+    .social-icons {
+      display: flex;
+      align-items: center;
+    }
+
+    .social-icons a {
+      display: flex;
+      align-items: center;
+    }
+
+    .offcanvas-dark {
+      background-color: #343a40;
+      color: white;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card.borderless {
+      border: none;
+      box-shadow: none;
+    }
+
+    body {
+      background-image: url('bg1.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    .modal-content {
+      background-color: #343a40;
+      color: white;
+    }
+
+    .form-label {
+      color: #adb5bd;
+      text-align: right;
+    }
+
+    .form-control,
+    .form-select {
+      background-color: #495057;
+      color: white;
+    }
+  </style>
+</head>
+
+<body class="text-bg-dark">
+  <div class="offcanvas offcanvas-start offcanvas-dark" id="demo">
+    <div class="offcanvas-header">
+      <h1 class="offcanvas-title">Heading</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <button type="button" class="btn" data-bs-toggle="offcanvas" data-bs-target="#demo">
+        Menu
+      </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <ul class="carousel-indicators">
+        <li data-bs-slide-to="0" class="active"></li>
+        <li data-bs-slide-to="1"></li>
+        <li data-bs-slide-to="2"></li>
+      </ul>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="verse1.png" class="d-block w-100" alt="Break the Chords">
+        </div>
+        <div class="carousel-item">
+          <img src="verse2.png" class="d-block w-100" alt="In your steps">
+        </div>
+        <div class="carousel-item">
+          <img src="verse3.png" class="d-block w-100" alt="Decode">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="card-container px-4 text-center">
+    <div class="row p-2">
+      <div class="card col-xl-4 col-sm-12 p-2 borderless" style="background: transparent">
+        <div class="text-bg-dark" style="padding: 20px; border-radius: 10px;">
+          <img src="pic1.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Break the Chords</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-outline-success">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="card col-xl-4 col-sm-12 p-2 borderless" style="background: transparent">
+        <div class="text-bg-dark" style="padding: 20px; border-radius: 10px;">
+          <img src="pic2.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Break the Chords</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-outline-success">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="card col-xl-4 col-sm-12 p-2 borderless" style="background: transparent">
+        <div class="text-bg-dark" style="padding: 20px; border-radius: 10px;">
+          <img src="pic3.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Break the Chords</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-outline-success">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="card col-xl-4 col-sm-12 p-2 borderless" style="background: transparent">
+        <div class="text-bg-dark" style="padding: 20px; border-radius: 10px;">
+          <img src="pic4.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Break the Chords</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-outline-success">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container text-center">
+    <h2>Contact Form</h2>
+    <form action="https://www.freecodecamp.com/email-submit">
+      <div class="mb-3 mt-3 row">
+        <label for="name" class="form-label col-sm-2">Name:</label>
+        <input type="text" class="form-control col-sm-10" id="name" placeholder="Enter name" name="name">
+      </div>
+      <div class="mb-3 row">
+        <label for="email" class="form-label col-sm-2">Email:</label>
+        <input type="email" class="form-control col-sm-10" id="email" placeholder="Enter email" name="email">
+      </div>
+      <div class="mb-3 row">
+        <label for="message" class="form-label col-sm-2">Message:</label>
+        <textarea class="form-control col-sm-10" id="message" placeholder="Enter message" name="message"></textarea>
+      </div>
+      <button type="submit" class="btn btn-outline-success">Submit</button>
+    </form>
+  </div>
+
+  <div class="container text-center mt-5">
+    <p>Follow us on social media</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/your-profile" class="me-2"><img src="facebook-icon.png" alt="Facebook" style="width: 30px;"></a>
+      <a href="https://www.instagram.com/your-profile" class="me-2"><img src="instagram-icon.png" alt="Instagram" style="width: 30px;"></a>
+      <a href="https://www.twitter.com/your-profile" class="me-2"><img src="twitter-icon.png" alt="Twitter" style="width: 30px;"></a>
+    </div>
+  </div>
+</body>
+
+</html>
