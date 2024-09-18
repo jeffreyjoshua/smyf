@@ -34,6 +34,18 @@
       border: none;
       box-shadow: none;
     }
+    .modal-content {
+            background-color: #343a40; /* Dark theme background color */
+            color: white; /* Dark theme text color */
+      }
+      .modal-header {
+        display: flex;
+        justify-content: center;
+      }
+
+      .modal-title {
+        margin:0 auto
+      }
 
   </style> 
 </head> 
@@ -86,72 +98,258 @@
 
   <div class="card-container px-4 text-center" >
     <div class="row p-2">
-      <div class="card col-md-6 col-lg-4 col-xl-4  mb-2 p-2 borderless" style="background: transparent">
+      <div class="card col-md-6 col-lg-4 col-xl-4 mb-2 p-2 borderless" style="background: transparent">
         <div class="text-bg-dark" style="padding: 20px; border-radius: 10px;">
           <img src="pic1.jpg" class="card-img-top">
           <div class="card-body">
-            <h5 class="card-title">Singing</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-outline-success">For More Details</a>
+            <h5 class="card-title">Rythm Rumble </h5>
+            <p class="card-text">Showcase your vocal talent and creativity through a theme-based performance. Original compositions score higher!</p>
+            <a type="button" data-toggle="modal" data-target="#infoSingingModal" class="btn btn-outline-success">For More Details</a>
           </div>
         </div>
       </div>
+      
+      <div class="modal fade" id="infoSingingModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLabel">More Information</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+      
+            <!-- Modal Body -->
+            <div class="modal-body" style="text-align: left;">
+              <strong>GENERAL RULES:</strong><br>
+              <ol>
+                <li>Song must be based on the theme.<br></li>
+                <li>Own compositions boost up scores.<br></li>
+                <li>A copy of the lyrics sheet must be handed over to the judges.<br></li>
+                <li>Jam an instrumental performance post singing.<br></li>
+                <li>Keyboard, Electric Guitar, Acoustic Guitar, Bass Guitar, and Drum kit will be provided on stage.<br></li>
+              </ol>
+      
+              <strong>TIME DURATION:</strong><br>
+              <ul>
+                <li>Singing - 5 Minutes<br></li>
+                <li>Instrumental - 3 Minutes<br></li>
+                <li>Setup - 2 Minutes<br></li>
+              </ul>
+      
+              <strong>CREW:</strong><br>
+              Minimum 3 singers.<br>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <div class="card col-md-6 col-lg-4 col-xl-4 mb-2 p-2 borderless" style="background: transparent">
         <div class="text-bg-dark" style="padding: 20px; border-radius: 10px;">
           <img src="pic2.jpg" class="card-img-top">
           <div class="card-body">
-            <h5 class="card-title">Mime</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-outline-success">For More Details</a>
+            <h5 class="card-title">Wordless Wonders</h5>
+            <p class="card-text">Bring your creative expressions to life in a silent performance. Innovate with props and show your artistry without words!</p>
+            <a type="button" data-toggle="modal" data-target="#infoMimeModal" class="btn btn-outline-success">For More Details</a>
           </div>
         </div>
       </div>
+      
+      <div class="modal fade" id="infoMimeModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLabel">More Information</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+      
+            <!-- Modal Body -->
+            <div class="modal-body" style="text-align: left;">
+              <strong>GENERAL RULES:</strong><br>
+              <ol>
+                <li>The performance must be based on the theme.<br></li>
+                <li>The mime should not contain any dialogues or lip syncs.<br></li>
+                <li>No secular music or offensive/disrespectful actions are allowed.<br></li>
+                <li>Properties can be used.<br></li>
+                <li>Upload your music in a drive and share the link to smyf.refresh2k24@gmail.com on or before 24th OCT.<br></li>
+                <li>Points will be awarded based on expression, innovation, and use of props.<br></li>
+              </ol>
+      
+              <strong>TIME LIMIT:</strong><br>
+              5 minutes maximum<br><br>
+      
+              <strong>CREW:</strong><br>
+              Minimum 5 participants.<br>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <div class="card col-md-6 col-lg-4 col-xl-4 mb-2 p-2 borderless" style="background: transparent">
         <div class="text-bg-dark" style="padding: 20px; border-radius: 10px;">
           <img src="pic3.jpg" class="card-img-top">
           <div class="card-body">
-            <h5 class="card-title">Bible Quiz</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-outline-success">For More Details</a>
+            <h5 class="card-title">Decrypt With Hustle</h5>
+            <p class="card-text">Test your knowledge!! . Showcase your understanding and interpretation of these texts!</p>
+            <a type="button" data-toggle="modal" data-target="#infoDecryptModal" class="btn btn-outline-success">For More Details</a>
           </div>
         </div>
       </div>
+      
+      <div class="modal fade" id="infoDecryptModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLabel">More Information</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+      
+            <!-- Modal Body -->
+            <div class="modal-body" style="text-align: left;">
+              <strong>GENERAL RULES:</strong><br>
+              <ol>
+                <li>Prelims & Finals will be covered from the books of I & II Samuel, I & II Kings, Acts & Hebrews.<br></li>
+                <li>Versions:<br>
+                  Tamil - பரிசுத்த வேதாகமம்<br>
+                  English - NIV (New International Version)<br></li>
+              </ol>
+      
+              <strong>CREW:</strong><br>
+              3 Participants per church.<br>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <div class="card col-md-6 col-lg-4 col-xl-4 mb-2 p-2 borderless" style="background: transparent">
         <div class="text-bg-dark" style="padding: 20px; border-radius: 10px;">
           <img src="pic4.jpg" class="card-img-top">
           <div class="card-body">
-            <h5 class="card-title">Ramp-walk</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-outline-success">For More Details</a>
+            <h5 class="card-title">Stride and Shine</h5>
+            <p class="card-text">Showcase your character on the ramp! Express yourself through your costume, props, and performance.</p>
+            <a type="button" data-toggle="modal" data-target="#infoStrideModal" class="btn btn-outline-success">For More Details</a>
           </div>
         </div>
       </div>
+      
+      <div class="modal fade" id="infoStrideModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLabel">More Information</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+      
+            <!-- Modal Body -->
+            <div class="modal-body" style="text-align: left;">
+              <strong>GENERAL RULES:</strong><br>
+              <ol>
+                <li>Participants should express the character given to them during the ramp.<br></li>
+                <li>Each team must bring their own costume and props, which must be appropriate.<br></li>
+                <li>Marks will be given based on delivery of the character, walking, clothing, styling, and expression.<br></li>
+                <li>Character will be notified to the respective churches on 13th Oct.<br></li>
+              </ol>
+      
+              <strong>TIME LIMIT:</strong><br>
+              Ramp walk - 1 minute<br><br>
+      
+              <strong>CREW:</strong><br>
+              2 participants per church.<br>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <div class="card col-md-6 col-lg-4 col-xl-4 mb-2 p-2 borderless" style="background: transparent">
         <div class="text-bg-dark" style="padding: 20px; border-radius: 10px;">
           <img src="pic5.jpg" class="card-img-top">
           <div class="card-body">
-            <h5 class="card-title">T-shirt Painting</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-outline-success">For More Details</a>
+            <h5 class="card-title">Mark on-Tee</h5>
+            <p class="card-text">Design your creativity on a plain white tee. Bring your artistic vision to life based on the day's topic!</p>
+            <a type="button" data-toggle="modal" data-target="#infoMarkOnTeeModal" class="btn btn-outline-success">For More Details</a>
           </div>
         </div>
       </div>
+      
+      <div class="modal fade" id="infoMarkOnTeeModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLabel">More Information</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+      
+            <!-- Modal Body -->
+            <div class="modal-body" style="text-align: left;">
+              <strong>GENERAL RULES:</strong><br>
+              <ol>
+                <li>Design should be based on the given topic.<br></li>
+                <li>Topic will be revealed on the day of the event.<br></li>
+                <li>Plain white T-shirt will be provided.<br></li>
+                <li>Paints, brushes, and other required items must be brought by the respective participants.<br></li>
+                <li>Mobile phones or any other electronic devices shall not be allowed during the competition.<br></li>
+                <li>Use of any other materials or ready-made stickers is strictly prohibited.<br></li>
+              </ol>
+      
+              <strong>TIME LIMIT:</strong><br>
+              1 Hour<br><br>
+      
+              <strong>CREW :</strong><br>
+              2 participants per church.<br>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <div class="card col-md-6 col-lg-4 col-xl-4 mb-2 p-2 borderless" style="background: transparent">
         <div class="text-bg-dark" style="padding: 20px; border-radius: 10px;">
           <img src="pic6.jpg" class="card-img-top">
           <div class="card-body">
-            <h5 class="card-title">Shipwreck</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-              <a href="#" class="btn btn-outline-success">For More Details</a>
+            <h5 class="card-title">The Interview</h5>
+            <p class="card-text">Demonstrate your skills in a mock interview with three rounds. Impress the interviewer and secure your spot!</p>
+            <a type="button" data-toggle="modal" data-target="#infoInterviewModal" class="btn btn-outline-success">For More Details</a>
           </div>
         </div>
       </div>
+      
+      <div class="modal fade" id="infoInterviewModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLabel">More Information</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+      
+            <!-- Modal Body -->
+            <div class="modal-body" style="text-align: left;">
+              <strong>GENERAL RULES:</strong><br>
+              <p>Imagine you are in a job interview with only 3 job vacancies. Do you have what it takes to persuade the interviewer to offer you the job? The interview will have 3 rounds:</p>
+              <ol>
+                <li><strong>Round 1 - Self Introduction:</strong> Personality will be revealed during the event and preparation time will be given. Talk about the personality for a minute and justify why you deserve the job.<br></li>
+                <li><strong>Round 2 - Group Discussion:</strong> Groups will be split based on the number of participants. Talk about the same personality and comment on why other personalities do not deserve the job. Cross-questioning is allowed. Shortlisted teams will move to the Final round.<br></li>
+                <li><strong>Round 3 - The Interview:</strong> New personalities will be assigned. The interview will be conducted between two churches. Interviewer decision will be final.<br></li>
+              </ol>
+      
+              <strong>TIME LIMIT:</strong><br>
+              Will be told on the spot<br><br>
+      
+              <strong>CREW:</strong><br>
+              1 participant per church.<br>
+            </div>
+          </div>
+        </div>
+      </div>
+      
   </div>
   <div class="text-bg-dark">
     <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
@@ -210,23 +408,23 @@
         <section class="">
             <div class="container text-center text-md-start mt-5">
                 <div class="row mt-3">
-                    <div class=" col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto mb-4">
+                    <div class=" col-sm-12 col-md-6 col-lg-6  mx-auto mb-4">
                         <img src="refresh logo.png" class="img-fluid" style="width: 220px; height: 220px;">
                     </div>
                     
 
                     
 
-                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto mb-md-0 mb-4">
-                        <h6 class="text-uppercase fw-bold">Contact</h6>
-                        <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px">
-                        <p><svg style="width: 20px; height: 20px;" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" id="google-home"><path fill="#4285f4" d="M14.1947,3.7572a2.5909,2.5909,0,0,1,3.6694.0086l10.333,10.401a2.6022,2.6022,0,0,1,.7563,1.8226L28.98,21.98,29,26.3888A2.5983,2.5983,0,0,1,26.405,29H24V17L16,9,12.4734,5.4735Z"></path><path fill="#ea4435" d="M14.1161,3.7658,3.7831,14.1668a2.6022,2.6022,0,0,0-.7563,1.8226L3,21.98,7.98,17l8-8,3.5266-3.5265L17.7855,3.7572A2.5909,2.5909,0,0,0,14.1161,3.7658Z"></path><path fill="#fbc02d" d="M8,24V17L3.02,21.98,3,26.3888A2.5983,2.5983,0,0,0,5.595,29H8Z"></path><rect width="16" height="5" x="8" y="24" fill="#00ac47"></rect></svg> Padi, Chennai, Tamil Nadu 600050</p>
-                        <p><svg style="width: 20px; height: 20px;" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48" id="gmail"><path fill="#4285F4" d="M3.27273 42.0088H10.9091V23.4633L0 15.2815V38.736C0 40.5442 1.46455 42.0088 3.27273 42.0088Z"></path><path fill="#34A853" d="M37.0909 42.0088H44.7273C46.5355 42.0088 48 40.5442 48 38.736V15.2815L37.0909 23.4633V42.0088Z"></path><path fill="#FBBC04" d="M37.0909 9.28155V23.4634L48 15.2815V10.9179C48 6.87336 43.3827 4.56336 40.1455 6.99064L37.0909 9.28155Z"></path><path fill="#EA4335" fill-rule="evenodd" d="M10.9091 23.4633V9.28149L24 19.0997L37.0909 9.28149V23.4633L24 33.2815L10.9091 23.4633Z" clip-rule="evenodd"></path><path fill="#C5221F" d="M0 10.9179V15.2815L10.9091 23.4634V9.28155L7.85455 6.99064C4.61727 4.56336 0 6.87336 0 10.9179Z"></path></svg> stmichaelsyouthfellowship@gmail.com</p>
-                        <p><svg style="width: 20px; height: 20px;" xmlns="http://www.w3.org/2000/svg" width="32" height="32" id="contact"><path fill="#10bafc" d="M25.5 16.5V27c0 .831-.669 1.5-1.5 1.5H8c-.831 0-1.5-.669-1.5-1.5V5c0-.83.669-1.5 1.5-1.5h16c.831 0 1.5.67 1.5 1.5v8z"></path><path fill="#0084ff" d="M19.5 8.5h-5v-2h5m0 6h-4v-2h4M8 3.5c-.831 0-1.5.67-1.5 1.5v22c0 .831.669 1.5 1.5 1.5h2.5v-25z"></path><path fill="#e6e7e8" d="M19.5 3.5h3v11l-1.5-1-1.5 1z"></path><path style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1" d="M8 1023.361c-1.1 0-2 .901-2 2v22c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-22c0-1.099-.9-2-2-2H8zm0 1h16c.563 0 1 .438 1 1v22c0 .563-.437 1-1 1H8c-.563 0-1-.437-1-1v-22c0-.562.437-1 1-1z" color="#000" font-family="sans-serif" font-weight="400" overflow="visible" transform="translate(0 -1020.362)"></path><path fill-rule="evenodd" style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1" d="M10.492 1023.856a.5.5 0 0 0-.492.505v24a.5.5 0 1 0 1 0v-24a.5.5 0 0 0-.508-.506z" color="#000" font-family="sans-serif" font-weight="400" overflow="visible" transform="translate(0 -1020.362)"></path><path style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1" d="M19.5 1023.361a.5.5 0 0 0-.5.5v11a.5.5 0 0 0 .777.416l1.223-.814 1.223.814a.5.5 0 0 0 .777-.416v-11a.5.5 0 0 0-.5-.5h-3zm.5 1h2v9.567l-.723-.483a.5.5 0 0 0-.554 0l-.723.483v-9.567z" color="#000" font-family="sans-serif" font-weight="400" overflow="visible" transform="translate(0 -1020.362)"></path><path style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1" d="M14.5 1026.361a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h5a.5.5 0 1 0 0-1H15v-1h4.5a.5.5 0 1 0 0-1h-5zm1 4a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h4a.5.5 0 1 0 0-1H16v-1h3.5a.5.5 0 1 0 0-1h-4z" color="#000" font-family="sans-serif" font-weight="400" overflow="visible" transform="translate(0 -1020.362)"></path></svg> + 01 234 567 88</p>
-                        
-                        <p><svg style="width: 20px; height: 20px;" xmlns="http://www.w3.org/2000/svg" width="32" height="32" id="contact"><path fill="#10bafc" d="M25.5 16.5V27c0 .831-.669 1.5-1.5 1.5H8c-.831 0-1.5-.669-1.5-1.5V5c0-.83.669-1.5 1.5-1.5h16c.831 0 1.5.67 1.5 1.5v8z"></path><path fill="#0084ff" d="M19.5 8.5h-5v-2h5m0 6h-4v-2h4M8 3.5c-.831 0-1.5.67-1.5 1.5v22c0 .831.669 1.5 1.5 1.5h2.5v-25z"></path><path fill="#e6e7e8" d="M19.5 3.5h3v11l-1.5-1-1.5 1z"></path><path style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1" d="M8 1023.361c-1.1 0-2 .901-2 2v22c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-22c0-1.099-.9-2-2-2H8zm0 1h16c.563 0 1 .438 1 1v22c0 .563-.437 1-1 1H8c-.563 0-1-.437-1-1v-22c0-.562.437-1 1-1z" color="#000" font-family="sans-serif" font-weight="400" overflow="visible" transform="translate(0 -1020.362)"></path><path fill-rule="evenodd" style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1" d="M10.492 1023.856a.5.5 0 0 0-.492.505v24a.5.5 0 1 0 1 0v-24a.5.5 0 0 0-.508-.506z" color="#000" font-family="sans-serif" font-weight="400" overflow="visible" transform="translate(0 -1020.362)"></path><path style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1" d="M19.5 1023.361a.5.5 0 0 0-.5.5v11a.5.5 0 0 0 .777.416l1.223-.814 1.223.814a.5.5 0 0 0 .777-.416v-11a.5.5 0 0 0-.5-.5h-3zm.5 1h2v9.567l-.723-.483a.5.5 0 0 0-.554 0l-.723.483v-9.567z" color="#000" font-family="sans-serif" font-weight="400" overflow="visible" transform="translate(0 -1020.362)"></path><path style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1" d="M14.5 1026.361a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h5a.5.5 0 1 0 0-1H15v-1h4.5a.5.5 0 1 0 0-1h-5zm1 4a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h4a.5.5 0 1 0 0-1H16v-1h3.5a.5.5 0 1 0 0-1h-4z" color="#000" font-family="sans-serif" font-weight="400" overflow="visible" transform="translate(0 -1020.362)"></path></svg> + 01 234 567 88</p>
-                        
-                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 mx-auto mb-md-0 mb-4">
+                      <h6 class="text-uppercase fw-bold">Contact</h6>
+                      <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px">
+                      <p><svg style="width: 20px; height: 20px;" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" id="google-home"><path fill="#4285f4" d="M14.1947,3.7572a2.5909,2.5909,0,0,1,3.6694.0086l10.333,10.401a2.6022,2.6022,0,0,1,.7563,1.8226L28.98,21.98,29,26.3888A2.5983,2.5983,0,0,1,26.405,29H24V17L16,9,12.4734,5.4735Z"></path><path fill="#ea4435" d="M14.1161,3.7658,3.7831,14.1668a2.6022,2.6022,0,0,0-.7563,1.8226L3,21.98,7.98,17l8-8,3.5266-3.5265L17.7855,3.7572A2.5909,2.5909,0,0,0,14.1161,3.7658Z"></path><path fill="#fbc02d" d="M8,24V17L3.02,21.98,3,26.3888A2.5983,2.5983,0,0,0,5.595,29H8Z"></path><rect width="16" height="5" x="8" y="24" fill="#00ac47"></rect></svg> Padi, Chennai, Tamil Nadu 600050</p>
+                      <p><svg style="width: 20px; height: 20px;" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48" id="gmail"><path fill="#4285F4" d="M3.27273 42.0088H10.9091V23.4633L0 15.2815V38.736C0 40.5442 1.46455 42.0088 3.27273 42.0088Z"></path><path fill="#34A853" d="M37.0909 42.0088H44.7273C46.5355 42.0088 48 40.5442 48 38.736V15.2815L37.0909 23.4633V42.0088Z"></path><path fill="#FBBC04" d="M37.0909 9.28155V23.4634L48 15.2815V10.9179C48 6.87336 43.3827 4.56336 40.1455 6.99064L37.0909 9.28155Z"></path><path fill="#EA4335" fill-rule="evenodd" d="M10.9091 23.4633V9.28149L24 19.0997L37.0909 9.28149V23.4633L24 33.2815L10.9091 23.4633Z" clip-rule="evenodd"></path><path fill="#C5221F" d="M0 10.9179V15.2815L10.9091 23.4634V9.28155L7.85455 6.99064C4.61727 4.56336 0 6.87336 0 10.9179Z"></path></svg> stmichaelsyouthfellowship@gmail.com</p>
+                      <p><svg style="width: 20px; height: 20px;" xmlns="http://www.w3.org/2000/svg" width="32" height="32" id="contact"><path fill="#10bafc" d="M25.5 16.5V27c0 .831-.669 1.5-1.5 1.5H8c-.831 0-1.5-.669-1.5-1.5V5c0-.83.669-1.5 1.5-1.5h16c.831 0 1.5.67 1.5 1.5v8z"></path><path fill="#0084ff" d="M19.5 8.5h-5v-2h5m0 6h-4v-2h4M8 3.5c-.831 0-1.5.67-1.5 1.5v22c0 .831.669 1.5 1.5 1.5h2.5v-25z"></path><path fill="#e6e7e8" d="M19.5 3.5h3v11l-1.5-1-1.5 1z"></path><path style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1" d="M8 1023.361c-1.1 0-2 .901-2 2v22c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-22c0-1.099-.9-2-2-2H8zm0 1h16c.563 0 1 .438 1 1v22c0 .563-.437 1-1 1H8c-.563 0-1-.437-1-1v-22c0-.562.437-1 1-1z" color="#000" font-family="sans-serif" font-weight="400" overflow="visible" transform="translate(0 -1020.362)"></path><path fill-rule="evenodd" style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1" d="M10.492 1023.856a.5.5 0 0 0-.492.505v24a.5.5 0 1 0 1 0v-24a.5.5 0 0 0-.508-.506z" color="#000" font-family="sans-serif" font-weight="400" overflow="visible" transform="translate(0 -1020.362)"></path><path style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1" d="M19.5 1023.361a.5.5 0 0 0-.5.5v11a.5.5 0 0 0 .777.416l1.223-.814 1.223.814a.5.5 0 0 0 .777-.416v-11a.5.5 0 0 0-.5-.5h-3zm.5 1h2v9.567l-.723-.483a.5.5 0 0 0-.554 0l-.723.483v-9.567z" color="#000" font-family="sans-serif" font-weight="400" overflow="visible" transform="translate(0 -1020.362)"></path><path style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1" d="M14.5 1026.361a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h5a.5.5 0 1 0 0-1H15v-1h4.5a.5.5 0 1 0 0-1h-5zm1 4a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h4a.5.5 0 1 0 0-1H16v-1h3.5a.5.5 0 1 0 0-1h-4z" color="#000" font-family="sans-serif" font-weight="400" overflow="visible" transform="translate(0 -1020.362)"></path></svg> +91 9940695422(Kevin)</p>
+                      
+                      <p><svg style="width: 20px; height: 20px;" xmlns="http://www.w3.org/2000/svg" width="32" height="32" id="contact"><path fill="#10bafc" d="M25.5 16.5V27c0 .831-.669 1.5-1.5 1.5H8c-.831 0-1.5-.669-1.5-1.5V5c0-.83.669-1.5 1.5-1.5h16c.831 0 1.5.67 1.5 1.5v8z"></path><path fill="#0084ff" d="M19.5 8.5h-5v-2h5m0 6h-4v-2h4M8 3.5c-.831 0-1.5.67-1.5 1.5v22c0 .831.669 1.5 1.5 1.5h2.5v-25z"></path><path fill="#e6e7e8" d="M19.5 3.5h3v11l-1.5-1-1.5 1z"></path><path style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1" d="M8 1023.361c-1.1 0-2 .901-2 2v22c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-22c0-1.099-.9-2-2-2H8zm0 1h16c.563 0 1 .438 1 1v22c0 .563-.437 1-1 1H8c-.563 0-1-.437-1-1v-22c0-.562.437-1 1-1z" color="#000" font-family="sans-serif" font-weight="400" overflow="visible" transform="translate(0 -1020.362)"></path><path fill-rule="evenodd" style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1" d="M10.492 1023.856a.5.5 0 0 0-.492.505v24a.5.5 0 1 0 1 0v-24a.5.5 0 0 0-.508-.506z" color="#000" font-family="sans-serif" font-weight="400" overflow="visible" transform="translate(0 -1020.362)"></path><path style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1" d="M19.5 1023.361a.5.5 0 0 0-.5.5v11a.5.5 0 0 0 .777.416l1.223-.814 1.223.814a.5.5 0 0 0 .777-.416v-11a.5.5 0 0 0-.5-.5h-3zm.5 1h2v9.567l-.723-.483a.5.5 0 0 0-.554 0l-.723.483v-9.567z" color="#000" font-family="sans-serif" font-weight="400" overflow="visible" transform="translate(0 -1020.362)"></path><path style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1" d="M14.5 1026.361a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h5a.5.5 0 1 0 0-1H15v-1h4.5a.5.5 0 1 0 0-1h-5zm1 4a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h4a.5.5 0 1 0 0-1H16v-1h3.5a.5.5 0 1 0 0-1h-4z" color="#000" font-family="sans-serif" font-weight="400" overflow="visible" transform="translate(0 -1020.362)"></path></svg> +91 9790961858(Augustin)</p>
+                      
+                  </div>
                 </div>
             </div>
         </section>
@@ -238,12 +436,11 @@
     </footer>
 </div>
 
-
-
   
 
-
   
-    
+  
+
 </body>
+
 </html>
