@@ -2,9 +2,18 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
+const fs = require('fs');
+const os = require('os');
 
 const app = express();
-const db = new sqlite3.Database('./test3.db'); // Database file
+const dbPath = path.join(os.homedir(), 'smyf-refresh2024.db');
+
+// Check if the database exists in the user root and create it if it does not
+if (!fs.existsSync(dbPath)) {
+    fs.writeFileSync(dbPath, '');
+}
+
+const db = new sqlite3.Database(dbPath); // Database file
 
 // Middleware
 app.use(bodyParser.json());
@@ -160,4 +169,3 @@ app.get('/retrieve', (req, res) => {
 app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
   console.log(`Server is running`);
 });
-
