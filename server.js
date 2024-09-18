@@ -4,54 +4,103 @@ const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 
 const app = express();
-const db = new sqlite3.Database('reg.db'); // Using a file-based database
+const db = new sqlite3.Database('./test3.db'); // Database file
 
-app.use(bodyParser.urlencoded({ extended: false }));
+// Middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public'))); // Serve static files (HTML, CSS, JS)
 
-app.use(express.static(path.join(__dirname, 'public')));
+// Create necessary tables if they don't exist
+db.serialize(() => {
+    // Create 'submissions' table for storing form data
+    db.run(`
+        CREATE TABLE IF NOT EXISTS submissions (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            chname TEXT NOT NULL,
+            cpname TEXT NOT NULL,
+            name TEXT NOT NULL,
+            pnumber TEXT NOT NULL,
+            nvcount INTEGER NOT NULL,
+            vcount INTEGER NOT NULL
+        )
+    `, (err) => {
+        if (err) {
+            console.error('Error creating "submissions" table:', err.message);
+        } else {
+            console.log('Table "submissions" is ready.');
+        }
+    });
+
+    // Create 'tag_submissions' table for storing tags
+    db.run(`
+        CREATE TABLE IF NOT EXISTS tag_submissions (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            tags TEXT NOT NULL
+        )
+    `, (err) => {
+        if (err) {
+            console.error('Error creating "tag_submissions" table:', err.message);
+        } else {
+            console.log('Table "tag_submissions" is ready.');
+        }
+    });
+});
 
 // Serve the HTML form
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Create table
-db.serialize(() => {
-    db.run("CREATE TABLE IF NOT EXISTS reg (id INTEGER PRIMARY KEY AUTOINCREMENT, chname TEXT, email TEXT, headcount INTEGER)");
-});
-
-// Handle form submission
+// Handle form submission (for the detailed form with tags)
 app.post('/submit', (req, res) => {
-    const { chname, email, headcount } = req.body;
-    const stmt = db.prepare("INSERT INTO reg (chname, email, headcount) VALUES (?, ?, ?)");
-    stmt.run(chname, email, headcount, (err) => {
+    const { chname, cpname, name, pnumber, nvcount, vcount, tags } = req.body;
+    
+    if (!tags || !Array.isArray(tags) || tags.length === 0) {
+        return res.status(400).json({ message: 'No tags provided' });
+    }
+
+    const tagsJson = JSON.stringify(tags); // Convert the tags array to a JSON string
+
+    // Insert form data into the submissions table
+    db.run(`
+        INSERT INTO submissions (chname, cpname, name, pnumber, nvcount, vcount)
+        VALUES (?, ?, ?, ?, ?, ?)
+    `, [chname, cpname, name, pnumber, nvcount, vcount], function (err) {
         if (err) {
-            return res.status(500).send("Failed to save data.");
+            console.error('Error inserting form data into submissions:', err.message);
+            return res.status(500).json({ message: 'Database error' });
         }
-        stmt.finalize();
-        
-        res.sendFile(path.join(__dirname, 'public', 'index.html'));
+
+        // Insert tags into the tag_submissions table
+        db.run(`
+            INSERT INTO tag_submissions (tags)
+            VALUES (?)
+        `, [tagsJson], function (err) {
+            if (err) {
+                console.error('Error inserting tags into tag_submissions:', err.message);
+                return res.status(500).json({ message: 'Database error' });
+            }
+            res.status(200).json({ message: 'Form data and tags saved successfully!', id: this.lastID });
+        });
     });
 });
 
-// Retrieve and display stored data
+// Retrieve and display registration data (only from submissions table here)
 app.get('/retrieve', (req, res) => {
-    db.all("SELECT * FROM reg", [], (err, rows) => {
+    db.all("SELECT * FROM submissions", [], (err, rows) => {
         if (err) {
-            return res.status(500).send("Failed to retrieve data.");
+            return res.status(500).send("Failed to retrieve submission data.");
         }
+
         let response = `
             <html>
                 <head>
                     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-                    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-                    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
                     <style>
                         body {
                             background-color: #121212;
                             color: #ffffff;
-                            font-family: Arial, sans-serif;
                         }
                         .table-dark {
                             background-color: #333333;
@@ -72,8 +121,11 @@ app.get('/retrieve', (req, res) => {
                                 <tr>
                                     <th>ID</th>
                                     <th>Church Name</th>
-                                    <th>Email</th>
-                                    <th>Head Count</th>
+                                    <th>Pastorate Name</th>
+                                    <th>Name</th>
+                                    <th>Phone No</th>
+                                    <th>Non-Veg Count</th>
+                                    <th>Veg Count</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -84,8 +136,11 @@ app.get('/retrieve', (req, res) => {
                 <tr>
                     <td>${row.id}</td>
                     <td>${row.chname}</td>
-                    <td>${row.email}</td>
-                    <td>${row.headcount}</td>
+                    <td>${row.cpname}</td>
+                    <td>${row.name}</td>
+                    <td>${row.pnumber}</td>
+                    <td>${row.nvcount}</td>
+                    <td>${row.vcount}</td>
                 </tr>
             `;
         });
@@ -94,7 +149,6 @@ app.get('/retrieve', (req, res) => {
                             </tbody>
                         </table>
                     </div>
-                    
                 </body>
             </html>
         `;
@@ -103,7 +157,7 @@ app.get('/retrieve', (req, res) => {
 });
 
 // Start the server
-app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
-    console.log(`Server is running`);
-  });
-  
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
