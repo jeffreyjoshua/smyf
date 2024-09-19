@@ -90,7 +90,7 @@ app.post('/submit', (req, res) => {
                 console.error('Error inserting tags into tag_submissions:', err.message);
                 return res.status(500).json({ message: 'Database error' });
             }
-            res.status(200).json({ message: 'Form data and tags saved successfully!', id: this.lastID });
+            //res.status(200).json({ message: 'Form data and tags saved successfully!', id: this.lastID });
         });
     });
 });
