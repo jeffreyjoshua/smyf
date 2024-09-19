@@ -25,6 +25,6 @@ jobs:
           git pull
         EOF
 
-      - name: Cleanup
+    - name: Cleanup
       if: ${{ always() }}
       uses: rtCamp/action-cleanup@master
