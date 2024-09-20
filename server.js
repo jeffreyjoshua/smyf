@@ -95,6 +95,7 @@ app.post('/submit', (req, res) => {
                     alert("Thank you for registering!");
                     window.location.href = "/";
                 </script>
+            `);
         });
     });
 });
