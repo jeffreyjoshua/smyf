@@ -205,9 +205,10 @@
       </div>
       <div class="row mb-3 justify-content-center">
         <label for="pnumber" class="col-sm-2 col-form-label">Phone.No</label>
-        <div class="col-sm-4">
-          <input type="text" class="form-control" id="pnumber" name="pnumber" placeholder="Enter your Phone.No" required>
-        </div>
+          <div class="col-sm-4">
+              <input type="text" class="form-control" id="pnumber" name="pnumber" placeholder="Enter your Phone.No" required
+                    pattern="^\d{10}$">
+          </div>
       </div>
       <div class="row mb-3 justify-content-center">
         <label for="nvcount" class="col-sm-2 col-form-label">Non-Veg</label>
