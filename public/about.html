@@ -107,23 +107,25 @@
             color: white; /* White text color */
         }
 
-    .image-grid {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 0 20px;
-      justify-content: space-between; /* Equal spacing between images */
-      gap: 10px; /* Small gap between images */
-    }
-
-    .image-grid img {
-      width: calc(25% - 10px); /* Four images in a row with equal spacing */
-    }
-
-    @media (max-width: 768px) {
-      .image-grid img {
-        width: calc(50% - 10px); /* Two images per row on mobile */
+      .image-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 20px;
+        gap: 10px; /* Small gap between images */
+        padding: 0 10px; /* Adds space to the left and right of the container */
       }
-    }    
+
+      .image-grid img {
+        width: calc(25% - 10px); /* Four images in a row with equal spacing */
+      }
+
+      @media (max-width: 768px) {
+        .image-grid img {
+          width: calc(50% - 10px); /* Two images per row on mobile */
+        }
+      }
+    
       
     
   </style>
@@ -204,12 +206,12 @@
 </h5>
 
 <h1 class="text-center">The Refresh</h1>
-<!--<div class="image-grid"></div>
+<div class="image-grid">
   <img src="public/2016.jpg" alt="Image 1">
   <img src="public/2018.jpeg" alt="Image 2">
   <img src="public/2020.jpg" alt="Image 3">
   <img src="public/2022.jpeg" alt="Image 4">
-</div>-->
+</div>
 
 <h5>
   The event REFRESH was initiated to unite young people under one roof and rejuvenate their spiritual lives. REFRESH is held annually as an inter-church and intra-church event, alternating between the two formats.
