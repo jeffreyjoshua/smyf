@@ -6,7 +6,7 @@ const fs = require('fs');
 const os = require('os');
 
 const app = express();
-const dbPath = path.join(os.homedir(), 'smyf-refresh2024.db');
+const dbPath = path.join(os.homedir(), 'refresh2024.db');
 
 // Check if the database exists in the user root and create it if it does not
 if (!fs.existsSync(dbPath)) {
