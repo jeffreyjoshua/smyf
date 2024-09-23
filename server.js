@@ -102,7 +102,13 @@ app.post('/submit', (req, res) => {
 
 // Retrieve and display registration data (only from submissions table here)
 app.get('/retrieve', (req, res) => {
-    db.all("SELECT * FROM submissions", [], (err, rows) => {
+    const query = `
+        SELECT submissions.id, chname, cpname, name, pnumber, nvcount, vcount, tag_submissions.tags 
+        FROM submissions 
+        LEFT JOIN tag_submissions ON submissions.id = tag_submissions.id
+    `;
+
+    db.all(query, [], (err, rows) => {
         if (err) {
             return res.status(500).send("Failed to retrieve submission data.");
         }
@@ -140,12 +146,16 @@ app.get('/retrieve', (req, res) => {
                                     <th>Phone No</th>
                                     <th>Non-Veg Count</th>
                                     <th>Veg Count</th>
+                                    <th>Events</th>
                                 </tr>
                             </thead>
                             <tbody>
         `;
 
         rows.forEach((row) => {
+            const tags = JSON.parse(row.tags); // Parse the JSON string back into an array
+            const tagsDisplay = tags.join(', '); // Convert the array to a comma-separated string
+
             response += `
                 <tr>
                     <td>${row.id}</td>
@@ -155,6 +165,7 @@ app.get('/retrieve', (req, res) => {
                     <td>${row.pnumber}</td>
                     <td>${row.nvcount}</td>
                     <td>${row.vcount}</td>
+                    <td>${tagsDisplay}</td>
                 </tr>
             `;
         });
@@ -169,6 +180,7 @@ app.get('/retrieve', (req, res) => {
         res.send(response);
     });
 });
+
 
 // Start the server
 app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
