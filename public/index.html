@@ -120,6 +120,12 @@
               height: 250px; /* Increase height for mobile */
           }
       }
+      @media (min-width: 768px) {
+        .carousel-item img {
+          height: 600px; /* Set the desired height */
+          object-fit: cover; /* To ensure the image scales properly */
+        }
+      }
       
   
 
@@ -195,16 +201,20 @@
         <li  data-bs-slide-to="0" class="active"></li>
         <li  data-bs-slide-to="1"></li>
         <li  data-bs-slide-to="2"></li>
+        <li  data-bs-slide-to="3"></li>
       </ul>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="public/verse1.png" class="d-block w-100" alt="Break the Chords">
+          <img src="public/img1.jpeg" class="d-block w-100" alt="Break the Chords">
         </div>
         <div class="carousel-item">
-          <img src="public/verse2.png" class="d-block w-100" alt="In your steps">
+          <img src="public/img2.jpeg" class="d-block w-100" alt="In your steps">
         </div>
         <div class="carousel-item">
-          <img src="public/verse3.png" class="d-block w-100" alt="Decode">
+          <img src="public/img3.jpeg" class="d-block w-100" alt="Decode">
+        </div>
+        <div class="carousel-item">
+          <img src="public/img5.jpeg" class="d-block w-100" alt="Decode">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
@@ -221,6 +231,7 @@
   <div class="container">
     <!-- Left Section -->
     <div class="left-section">
+        <img src="Thrive (1).png" alt="" style="width: 410px; height: 310px;">
         <h1 class="text-center">Greetings</h1>
         <h5>The Youth Fellowship of CSI St Michael's Church is delighted to invite you to REFRESH 2024. The theme for the event is "THRIVE - Flourish in Gods Courts" with the scriptural reference of Psalms 92:12-14. We as a fellowship are awaiting your participation in this event to glorify God's name by showcasing our God-given talents and to strengthen our fellowship. Prepare to Rock'n Roll on 27th of October, 2024 at 11:00 am.</h5>
 
