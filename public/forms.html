@@ -1,332 +1,451 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>REFRESH-2k24</title>
+    <link rel="icon" href="public/refresh logo.png" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <style>
+      body {
+        background-image: url("public/bg1.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        color: white;
+      }
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>REFRESH-2k24</title>
-  <link rel="icon" href="public/refresh logo.png">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <style>
-    body {
-      background-image: url('public/bg1.jpg');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      color: white;
-    }
-
-    h1 {
-      background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-      background-clip: text;
-      color: transparent;
-      text-align: center;
-      margin: 20px;
-    }
-
-    h5 {
-      margin: 20px;
-      line-height: 1.8;
-    }
-
-    .bullet ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
-
-    @media (max-width: 768px) {
       h1 {
-        font-size: 1.5rem;
+        background: linear-gradient(
+          43deg,
+          #4158d0 0%,
+          #c850c0 46%,
+          #ffcc70 100%
+        );
+        background-clip: text;
+        color: transparent;
+        text-align: center;
+        margin: 20px;
       }
 
       h5 {
+        margin: 20px;
+        line-height: 1.8;
+      }
+
+      .bullet ul {
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        h5 {
+          font-size: 1rem;
+          margin: 10px;
+        }
+      }
+
+      @media (min-width: 769px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        h5 {
+          font-size: 1.25rem;
+          margin: 0 100px;
+        }
+      }
+
+      .social-icons {
+        display: flex;
+        align-items: center;
+      }
+
+      .social-icons a {
+        display: flex;
+        align-items: center;
+      }
+
+      .card.borderless {
+        border: none;
+        box-shadow: none;
+      }
+
+      .form-label {
+        color: #adb5bd;
+        text-align: right;
+      }
+
+      .form-control,
+      .form-select {
+        background-color: #495057;
+        color: white;
+      }
+
+      .tags-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        border: 1px solid #444;
+        padding: 10px;
+        border-radius: 5px;
+        width: 400px;
+        background-color: #1e1e1e;
+      }
+
+      .tag {
+        background-color: #1a73e8;
+        padding: 5px 10px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        color: #fff;
+      }
+
+      .tag span {
+        margin-right: 10px;
+      }
+
+      .tag button {
+        background: none;
+        border: none;
         font-size: 1rem;
-        margin: 10px;
+        color: #fff;
+        cursor: pointer;
       }
-    }
 
-    @media (min-width: 769px) {
+      input[type="text"] {
+        background-color: #333;
+        border: 1px solid #555;
+        color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+        outline: none;
+      }
+
+      input[type="text"]::placeholder {
+        color: #999;
+      }
+
+      input[type="text"]:focus {
+        border-color: #1a73e8;
+      }
+
+      @media (max-width: 576px) {
+        .form-control {
+          width: 100%;
+        }
+      }
       h1 {
-        font-size: 2.5rem;
+        background: linear-gradient(
+          43deg,
+          #4158d0 0%,
+          #c850c0 46%,
+          #ffcc70 100%
+        );
+        background-clip: text;
+        color: transparent;
+        text-align: center;
+        margin: 20px;
       }
-
-      h5 {
-        font-size: 1.25rem;
-        margin: 0 100px;
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 1.5rem;
+        }
       }
-    }
-
-    .social-icons {
-      display: flex;
-      align-items: center;
-    }
-
-    .social-icons a {
-      display: flex;
-      align-items: center;
-    }
-
-    .card.borderless {
-      border: none;
-      box-shadow: none;
-    }
-
-    .form-label {
-      color: #adb5bd;
-      text-align: right;
-    }
-
-    .form-control,
-    .form-select {
-      background-color: #495057;
-      color: white;
-    }
-
-    .tags-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-      border: 1px solid #444;
-      padding: 10px;
-      border-radius: 5px;
-      width: 400px;
-      background-color: #1e1e1e;
-    }
-
-    .tag {
-      background-color: #1a73e8;
-      padding: 5px 10px;
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      color: #fff;
-    }
-
-    .tag span {
-      margin-right: 10px;
-    }
-
-    .tag button {
-      background: none;
-      border: none;
-      font-size: 1rem;
-      color: #fff;
-      cursor: pointer;
-    }
-
-    input[type="text"] {
-      background-color: #333;
-      border: 1px solid #555;
-      color: #fff;
-      padding: 5px;
-      border-radius: 5px;
-      outline: none;
-    }
-
-    input[type="text"]::placeholder {
-      color: #999;
-    }
-
-    input[type="text"]:focus {
-      border-color: #1a73e8;
-    }
-
-    @media (max-width: 576px) {
-      .form-control {
-        width: 100%;
+      @media (min-width: 769px) {
+        h1 {
+          font-size: 2.5rem;
+        }
       }
-    }
-    h1 {
-      background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-      background-clip: text;
-      color: transparent;
-      text-align: center;
-      margin: 20px;
-    }
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 1.5rem;
-      }
+    </style>
+  </head>
 
-      
-      
-    }
-    @media (min-width: 769px) {
-      h1 {
-        font-size: 2.5rem;
-      }
-    }
-  </style>
-</head>
-
-<body class="text-bg-dark">
-  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-    <div class="container-fluid">
-      <button type="button" class="btn" data-bs-toggle="offcanvas" data-bs-target="#demo">Menu</button>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Events</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="online.html">Online events</a></li>
-              <li><a class="dropdown-item" href="offline.html">Offline events</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Treasure Hunt</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="reg.html">Registration</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Normal Registration Form -->
-  <div class="container mt-5">
-    <h1 class="text-center">Registration Form </h1>
-    <form id="registration-form" action="/submit" method="post">
-      <div class="row mb-3 justify-content-center">
-        <label for="chname" class="col-sm-2 col-form-label">Church Name</label>
-        <div class="col-sm-4">
-          <input type="text" class="form-control" id="chname" name="chname" placeholder="Enter your church name" required>
+  <body class="text-bg-dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <button
+          type="button"
+          class="btn"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#demo"
+        >
+          Menu
+        </button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Events</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="online.html">Online events</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="offline.html"
+                    >Offline events</a
+                  >
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">Treasure Hunt</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="reg.html"
+                >Registration</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="row mb-3 justify-content-center">
-        <label for="cpname" class="col-sm-2 col-form-label">Pastorate Name</label>
-        <div class="col-sm-4">
-          <input type="text" class="form-control" id="cpname" name="cpname" placeholder="Enter your Pastorate name" required>
-        </div>
-      </div>
-      <div class="row mb-3 justify-content-center">
-        <label for="name" class="col-sm-2 col-form-label">Name</label>
-        <div class="col-sm-4">
-          <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
-        </div>
-      </div>
-      <div class="row mb-3 justify-content-center">
-        <label for="pnumber" class="col-sm-2 col-form-label">Phone.No</label>
+    </nav>
+
+    <!-- Normal Registration Form -->
+    <div class="container mt-5">
+      <h1 class="text-center">Registration Form</h1>
+      <form id="registration-form" action="/submit" method="post">
+        <div class="row mb-3 justify-content-center">
+          <label for="chname" class="col-sm-2 col-form-label"
+            >Church Name</label
+          >
           <div class="col-sm-4">
-              <input type="text" class="form-control" id="pnumber" name="pnumber" placeholder="Enter your Phone.No" required
-                    pattern="^\d{10}$">
+            <input
+              type="text"
+              class="form-control"
+              id="chname"
+              name="chname"
+              placeholder="Enter your church name"
+              required
+            />
           </div>
-      </div>
-      <div class="row mb-3 justify-content-center">
-        <label for="nvcount" class="col-sm-2 col-form-label">Non-Veg</label>
-        <div class="col-sm-4">
-          <input type="number" class="form-control" id="nvcount" name="nvcount" placeholder="Non-Veg Count" required>
         </div>
-      </div>
-      <div class="row mb-3 justify-content-center">
-        <label for="vcount" class="col-sm-2 col-form-label">Veg</label>
-        <div class="col-sm-4">
-          <input type="number" class="form-control" id="vcount" name="vcount" placeholder="Veg Count" required>
+        <div class="row mb-3 justify-content-center">
+          <label for="cpname" class="col-sm-2 col-form-label"
+            >Pastorate Name</label
+          >
+          <div class="col-sm-4">
+            <input
+              type="text"
+              class="form-control"
+              id="cpname"
+              name="cpname"
+              placeholder="Enter your Pastorate name"
+              required
+            />
+          </div>
         </div>
-      </div>
-      <div class="row mb-3 justify-content-center">
-        <label for="events" class="col-sm-2 col-form-label">Participating Events</label>
-        <div id="tag-form" class="d-flex flex-column align-items-center">
-          <div class="col-sm-5">
-            <div class="tags-container" id="tags-container">
-              <!-- Tags will be displayed here -->
+        <div class="row mb-3 justify-content-center">
+          <label for="name" class="col-sm-2 col-form-label">Name</label>
+          <div class="col-sm-4">
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+        </div>
+        <div class="row mb-3 justify-content-center">
+          <label for="pnumber" class="col-sm-2 col-form-label">Phone.No</label>
+          <div class="col-sm-4">
+            <input
+              type="text"
+              class="form-control"
+              id="pnumber"
+              name="pnumber"
+              placeholder="Enter your Phone.No"
+              required
+              pattern="^\d{10}$"
+            />
+          </div>
+        </div>
+        <div class="row mb-3 justify-content-center">
+          <label for="nvcount" class="col-sm-2 col-form-label">Non-Veg</label>
+          <div class="col-sm-4">
+            <input
+              type="number"
+              class="form-control"
+              id="nvcount"
+              name="nvcount"
+              placeholder="Non-Veg Count"
+              required
+            />
+          </div>
+        </div>
+        <div class="row mb-3 justify-content-center">
+          <label for="vcount" class="col-sm-2 col-form-label">Veg</label>
+          <div class="col-sm-4">
+            <input
+              type="number"
+              class="form-control"
+              id="vcount"
+              name="vcount"
+              placeholder="Veg Count"
+              required
+            />
+          </div>
+        </div>
+        <div class="row mb-3 justify-content-center">
+          <label for="events" class="col-sm-2 col-form-label"
+            >Participating Events</label
+          >
+          <div id="tag-form" class="d-flex flex-column align-items-center">
+            <div class="col-sm-5">
+              <div class="tags-container" id="tags-container">
+                <!-- Tags will be displayed here -->
+              </div>
+            </div>
+            <div class="col-sm-2 text-center mt-2">
+              <input
+                type="text"
+                id="tag-input"
+                name="tags[]"
+                list="suggestions"
+                class="form-control"
+                placeholder="Select an event"
+              />
+              <datalist id="suggestions">
+                <option value="Rythm Rumble"></option>
+                <option value="Wordless Wonders"></option>
+                <option value="Decrypt With Hustle"></option>
+                <option value="Stride and Shine"></option>
+                <option value="Mark on-Tee"></option>
+                <option value="The Interview"></option>
+                <option value="Pixelerate"></option>
+                <option value="Spotlight Snippets"></option>
+                <option value="Rap-the-Theme"></option>
+              </datalist>
             </div>
           </div>
-          <div class="col-sm-2 text-center mt-2">
-            <input type="text" id="tag-input" name="tags[]" list="suggestions" class="form-control" placeholder="Select an event" />
-            <datalist id="suggestions">
-              <option value="Rythm Rumble"></option>
-              <option value="Wordless Wonders"></option>
-              <option value="Decrypt With Hustle"></option>
-              <option value="Stride and Shine"></option>
-              <option value="Mark on-Tee"></option>
-              <option value="The Interview"></option>
-              <option value="Pixelerate"></option>
-              <option value="Spotlight Snippets"></option>
-              <option value="Rap-the-Theme"></option>
-            </datalist>
+        </div>
+        <!-- Hidden input to store the tags as a comma-separated string -->
+        <input type="hidden" id="tags-field" name="tags" />
+        <div class="row mb-3">
+          <div class="col text-center">
+            <button
+              type="submit"
+              class="btn btn-success"
+              style="margin-bottom: 10px; margin-top: 20px"
+            >
+              Register
+            </button>
           </div>
         </div>
-      </div>
-      <!-- Hidden input to store the tags as a comma-separated string -->
-      <input type="hidden" id="tags-field" name="tags">
-      <div class="row mb-3">
-        <div class="col text-center">
-          <button type="submit" class="btn btn-success" style="margin-bottom: 10px; margin-top: 20px;">Register</button>
-        </div>
-      </div>
-    </form>
-    <!-- <form action="/retrieve" method="get" style="margin-top: 20px;">
+      </form>
+      <!-- <form action="/retrieve" method="get" style="margin-top: 20px;">
       <input type="submit" class="btn btn-secondary" style="width: 200px; justify-content: center;" value="Retrieve">
     </form> -->
-  </div>
+    </div>
 
-  <script>
-    let tags = [];
-    const validTags = ["Rythm Rumble", "Wordless Wonders", "Decrypt With Hustle", "Stride and Shine", "Mark on-Tee", "The Interview", "Pixelerate", "Spotlight Snippets", "Rap-the-Theme"];
+    <script>
+      let tags = [];
+      const validTags = [
+        "Rythm Rumble",
+        "Wordless Wonders",
+        "Decrypt With Hustle",
+        "Stride and Shine",
+        "Mark on-Tee",
+        "The Interview",
+        "Pixelerate",
+        "Spotlight Snippets",
+        "Rap-the-Theme",
+      ];
 
-    document.getElementById("tag-input").addEventListener("input", function() {
-      const tagValue = this.value.trim();
-      if (validTags.includes(tagValue) && !tags.includes(tagValue)) {
-        tags.push(tagValue);
-        renderTags();
-      } else if (tagValue && !validTags.includes(tagValue)) {
-        // Optionally, display an error message or prevent addition
-        alert('Please select a valid event from the dropdown.');
+      document
+        .getElementById("tag-input")
+        .addEventListener("input", function () {
+          const tagValue = this.value.trim();
+          if (validTags.includes(tagValue) && !tags.includes(tagValue)) {
+            tags.push(tagValue);
+            renderTags();
+          } else if (tagValue && !validTags.includes(tagValue)) {
+            // Optionally, display an error message or prevent addition
+            alert("Please select a valid event from the dropdown.");
+          }
+          this.value = ""; // Clear the input after adding the tag
+        });
+
+      function renderTags() {
+        const tagsContainer = document.getElementById("tags-container");
+        tagsContainer.innerHTML = ""; // Clear previous tags
+
+        tags.forEach((tag) => {
+          const tagElement = document.createElement("div");
+          tagElement.classList.add("tag");
+
+          const tagText = document.createElement("span");
+          tagText.textContent = tag;
+
+          const removeButton = document.createElement("button");
+          removeButton.innerHTML = "&times;";
+          removeButton.onclick = function () {
+            removeTag(tag);
+          };
+
+          tagElement.appendChild(tagText);
+          tagElement.appendChild(removeButton);
+          tagsContainer.appendChild(tagElement);
+        });
+
+        // Update hidden input field with comma-separated tags
+        document.getElementById("tags-field").value = tags.join(",");
       }
-      this.value = ""; // Clear the input after adding the tag
-    });
 
-    function renderTags() {
-      const tagsContainer = document.getElementById("tags-container");
-      tagsContainer.innerHTML = ""; // Clear previous tags
-
-      tags.forEach(tag => {
-        const tagElement = document.createElement("div");
-        tagElement.classList.add("tag");
-
-        const tagText = document.createElement("span");
-        tagText.textContent = tag;
-
-        const removeButton = document.createElement("button");
-        removeButton.innerHTML = "&times;";
-        removeButton.onclick = function () {
-          removeTag(tag);
-        };
-
-        tagElement.appendChild(tagText);
-        tagElement.appendChild(removeButton);
-        tagsContainer.appendChild(tagElement);
-      });
-
-      // Update hidden input field with comma-separated tags
-      document.getElementById("tags-field").value = tags.join(",");
-    }
-
-    function removeTag(tagToRemove) {
-      tags = tags.filter(tag => tag !== tagToRemove);
-      renderTags();
-    }
-    
-  </script>
-</body>
-
+      function removeTag(tagToRemove) {
+        tags = tags.filter((tag) => tag !== tagToRemove);
+        renderTags();
+      }
+    </script>
+  </body>
 </html>

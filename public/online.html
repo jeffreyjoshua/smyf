@@ -1,384 +1,521 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!DOCTYPE html>
-  <html lang="en">
-  
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>REFRESH-2k24</title>
-    <link rel="icon" href="public/refresh logo.png">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    
-    
+<!DOCTYPE html>
+<html lang="en">
 
-    <!-- Bootstrap Bundle JS (includes Popper) -->
-    <style>
-      body
-      {
-          background-image: url('public/Webbg.jpg');
-          background-position: 100%;
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          background-size: cover;
-      }
-      .social-icons {
-          display: flex;
-          align-items: center;
-      }
-      .social-icons a {
-          display: flex;
-          align-items: center;
-      }
-      .card.borderless {
-        border: none;
-        box-shadow: none;
-      }
-      .modal-content {
-            background-color: #343a40; /* Dark theme background color */
-            color: white; /* Dark theme text color */
-      }
-      .modal-header {
-        display: flex;
-        justify-content: center;
-      }
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>REFRESH-2k24</title>
+  <link rel="icon" href="public/refresh logo.png" />
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
 
-      .modal-title {
-        margin:0 auto
-      }
+  <!-- Bootstrap Bundle JS (includes Popper) -->
+  <style>
+    body {
+      background-image: url("public/Webbg.jpg");
+      background-position: 100%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
 
-  
-  
-    </style> 
-  </head> 
-  
-  <body class="text-bg-dark ">
-              
-    <nav class="navbar navbar-expand-lg bg-body-tertiary"  data-bs-theme="dark">
-      <div class="container-fluid">
-          
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Events
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="online.html">Online events</a></li>
-                <li><a class="dropdown-item" href="offline.html">Offline events</a></li>
-                
-                <!--<li><a class="dropdown-item" href="#">Treasure Hunt</a></li>-->
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="reg.html">Registration</a>
-            </li>
-            
-          </ul>
-          
-        </div>
-      </div>
-    </nav>
-  
-    <div class="card-container px-4 text-center">
-      <div class="row p-2">
-    
-        <!-- Pixelerate Card -->
-        <div class="card col-md-6 col-lg-4 col-xl-4 mb-2 p-2 borderless" style="background: transparent">
-          <div class="text-bg-dark" style="padding: 20px; border-radius: 10px;">
-            <img src="public/Pixelerate.jpg" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">Pixelerate</h5>
-              <p class="card-text">Capture your creativity and storytelling through the lens. Let it speak with clarity, focus, and originality!</p>
-              <a type="button" data-toggle="modal" data-target="#info1Modal" class="btn btn-outline-success">For More Details</a>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Pixelerate Modal -->
-        <div class="modal fade" id="info1Modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-    
-              <!-- Modal Header -->
-              <div class="modal-header">
-                <h5 class="modal-title" id="modalLabel">More Information</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-    
-              <!-- Modal Body -->
-              <div class="modal-body" style="text-align: left;">
-                <strong>GENERAL RULES:</strong>
-                <ol>
-                  <li>Theme should be defined by the photography skills in the picture.</li>
-                  <li>Behavior Safety: Follow local laws and regulations. No risky or dangerous behavior to capture photos.</li>
-                  <li>Judging Criteria: Theme, picture quality, focus, exposure, lighting, explanation, and composition.</li>
-                  <li>Grounds for disqualification - plagiarism, inappropriate content.</li>
-                  <li>Decision of judges/organizers is final.</li>
-                </ol>
-    
-                <strong>SUBMISSION REQUIREMENTS:</strong>
-                <ol>
-                  <li>Format requirements (JPEG) maximum resolution/size.</li>
-                  <li>Naming, without editing raw images need to be submitted.</li>
-                </ol>
-    
-                <strong>1 ENTRY PER CHURCH</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Spotlight Snippets Card -->
-        <div class="card col-md-6 col-lg-4 col-xl-4 mb-2 p-2 borderless" style="background: transparent">
-          <div class="text-bg-dark" style="padding: 20px; border-radius: 10px;">
-            <img src="public/Spotlight Snippets.jpg" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">Spotlight Snippets</h5>
-              <p class="card-text">Lights, camera, action! Make your ideas shine in just 60 seconds and wow the audience. Let your creativity take the spotlight!</p>
-              <a type="button" data-toggle="modal" data-target="#info2Modal" class="btn btn-outline-success">For More Details</a>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Spotlight Snippets Modal -->
-        <div class="modal fade" id="info2Modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-    
-              <!-- Modal Header -->
-              <div class="modal-header">
-                <h5 class="modal-title" id="modalLabel">More Information</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-    
-              <!-- Modal Body -->
-              <div class="modal-body" style="text-align: left;">
-                <strong>GENERAL RULES:</strong>
-                <ol>
-                  <li>Content must be based on the theme.</li>
-                  <li>Do not use movie content or illegitimate jokes.</li>
-                  <li>Judged on storyline, creativity, properties, message, entertainment, performances, coordination, video, and audio quality.</li>
-                  <li>Reel must be uploaded to a drive and emailed to smyf.refresh2k24@gmail.com on or before the date.</li>
-                </ol>
-    
-                <strong>CREW:</strong>
-                <ol>
-                  <li>Any number of participants can be involved.</li>
-                </ol>
-    
-                <strong>SUBMISSION REQUIREMENTS:</strong>
-                <ol>
-                  <li>Use portrait mode (9:16).</li>
-                  <li>Video can be taken with a mobile phone or DSLR.</li>
-                  <li>Maximum runtime of reel: 60 seconds.</li>
-                </ol>
-    
-                <strong>1 ENTRY PER CHURCH</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Rap the Theme Card -->
-        <div class="card col-md-6 col-lg-4 col-xl-4 mb-2 p-2 borderless" style="background: transparent">
-          <div class="text-bg-dark" style="padding: 20px; border-radius: 10px;">
-            <img src="public/RapTheTheme.jpg" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">Rap the Theme</h5>
-              <p class="card-text">Drop the beat and bring the heat! Craft a powerful rap around the theme and let your words make an impact.</p>
-              <a type="button" data-toggle="modal" data-target="#info3Modal" class="btn btn-outline-success">For More Details</a>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Rap the Theme Modal -->
-        <div class="modal fade" id="info3Modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-    
-              <!-- Modal Header -->
-              <div class="modal-header">
-                <h5 class="modal-title" id="modalLabel">More Information</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-    
-              <!-- Modal Body -->
-              <div class="modal-body" style="text-align: left;">
-                <strong>GENERAL RULES:</strong>
-                <ol>
-                  <li>Rap must be based on the theme.</li>
-                  <li>Be creative and implement your own ideas.</li>
-                  <li>Any number of participants can be involved.</li>
-                  <li>Audio and video with a copy of the lyrics must be emailed to smyf.refresh2k24@gmail.com on or before the date.</li>
-                </ol>
-    
-                <strong>TIME LIMIT:</strong>
-                <ol>
-                  <li>2 minutes maximum.</li>
-                </ol>
-    
-                <strong>SUBMISSION REQUIREMENTS:</strong>
-                <ol>
-                  <li>The video resolution must be 1920x1080.</li>
-                  <li>Submission must be made in MP4 format.</li>
-                </ol>
-    
-                <strong>1 ENTRY PER CHURCH</strong>
-              </div>
-            </div>
-          </div>
-        </div>
+    .social-icons {
+      display: flex;
+      align-items: center;
+    }
 
-        <div class="card col-md-6 col-lg-4 col-xl-4 mb-2 p-2 borderless" style="background: transparent">
-          <div class="text-bg-dark" style="padding: 20px; border-radius: 10px;">
-            <img src="public/Holy Hunch.jpg" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">Holy Hunch</h5>
-              <p class="card-text">Step into a world of mystery, puzzles, riddles, and hidden clues. Only the quickest and sharpest minds will claim the treasure.</p>
-              <a type="button" data-toggle="modal" data-target="#info4Modal" class="btn btn-outline-success">For More Details</a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Holy Hunch Modal -->
-        <div class="modal fade" id="info4Modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-        
-              <!-- Modal Header -->
-              <div class="modal-header">
-                <h5 class="modal-title" id="modalLabel">More Information</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-        
-              <!-- Modal Body -->
-              <div class="modal-body" style="text-align: left;">
-                <strong>GENERAL RULES:</strong><br>
-                <ol>
-                  <li>The event will happen in Google Forms.</li>
-                  <li>Each church needs to share one unique email ID and phone number, which will be used to participate in the event.</li>
-                  <li>Each stage will have clues in the form of text, audio, video, or a link to crack the correct code and proceed to the next stage.</li>
-                  <li>Churches will be rewarded based on the number of stages they complete before the online event closing date.</li>
-                  <li>Other details will be communicated shortly.</li>
-                </ol>
-        
-                <strong>1 ENTRY PER CHURCH</strong>
-              </div>                  
-            </div>
-          </div>
-        </div>
-        
-    
+    .social-icons a {
+      display: flex;
+      align-items: center;
+    }
+
+    .card.borderless {
+      border: none;
+      box-shadow: none;
+    }
+
+    .modal-content {
+      background-color: #343a40;
+      /* Dark theme background color */
+      color: white;
+      /* Dark theme text color */
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: center;
+    }
+
+    .modal-title {
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body class="text-bg-dark">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Events
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="online.html">Online events</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="offline.html">Offline events</a>
+              </li>
+
+              <!--<li><a class="dropdown-item" href="#">Treasure Hunt</a></li>-->
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="reg.html">Registration</a>
+          </li>
+        </ul>
       </div>
     </div>
-    
-        <div class="text-bg-dark">
-          <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
-              <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
-                  <div class="me-5">
-                      <span>Get connected with us on social networks:</span>
-                  </div>
-                  <div class="social-icons">
-                      <a href="https://www.facebook.com/p/St-Michaels-Church-Youth-100069615477125/" class="me-4">
-                          <svg style="width: 30px; height: 30px;" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" id="facebook-logo">
-                              <path fill="#3b5999" d="m21 0h-18c-1.655 0-3 1.345-3 3v18c0 1.654 1.345 3 3 3h18c1.654 0 3-1.346 3-3v-18c0-1.655-1.346-3-3-3z"></path>
-                              <path fill="#334d85" d="m12 0h-9c-1.655 0-3 1.345-3 3v18c0 1.654 1.345 3 3 3h9z"></path>
-                              <path fill="#fff" d="m16.5 12v-3c0-.828.672-.75 1.5-.75h1.5v-3.75h-3c-2.486 0-4.5 2.014-4.5 4.5v3h-3v3.75h3v8.25h4.5v-8.25h2.25l1.5-3.75z"></path>
-                              <path fill="#dedede" d="m14.263 5.094c-1.353.777-2.263 2.235-2.263 3.906v3h-3v3.75h3v8.25h2.263z"></path>
-                          </svg>
-                      </a>
-                      <a href="https://www.youtube.com/@refresh9115" class="me-4">
-                          <svg style="width: 30px; height: 30px;" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" id="youtube">
-                              <path fill="#e53935" d="m23.469 5.929.03.196c-.497-1.764-2.189-2.178-2.089-2.117-2.435-.661-16.298-.686-18.799 0-1.741.504-2.147 2.217-2.089 2.117-.678 3.539-.726 7.916.03 11.947l-.03-.198c.497 1.765 2.189 2.178 2.089 2.117 2.468.672 16.296.673 18.799 0 1.016-.294 1.799-1.088 2.084-2.096.292-2.119.506-2.616.506-6.12 0-1.997-.182-3.951-.531-5.846z"></path>
-                              <path fill="#c7322e" d="m11.979 3.5c-.526 0-7.55.009-9.368.508-1.741.504-2.147 2.217-2.089 2.117-.666 3.477-.741 7.835.03 11.947l-.03-.198c.497 1.765 2.189 2.178 2.089 2.117 1.827.498 9.072.509 9.389.509v-17c-.005 0-.012 0-.021 0z"></path>
-                              <path fill="#fff" d="m9.607 15.651v-7.293l6.267 3.652z"></path>
-                              <path fill="#dedede" d="m15.856 12h-6.249v3.651l6.267-3.641z"></path>
-                          </svg>
-                      </a>
-                      <a href="https://www.instagram.com/smyf_refresh/" class="me-4">
-                          <svg style="width: 30px; height: 30px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.87 28.87" id="instagram">
-                              <defs>
-                                  <linearGradient id="a" x1="-1.84" x2="32.16" y1="30.47" y2="-3.03" gradientUnits="userSpaceOnUse">
-                                      <stop offset="0" stop-color="#fed576"></stop>
-                                      <stop offset=".26" stop-color="#f47133"></stop>
-                                      <stop offset=".61" stop-color="#bc3081"></stop>
-                                      <stop offset="1" stop-color="#4c63d2"></stop>
-                                  </linearGradient>
-                              </defs>
-                              <g>
-                                  <g>
-                                      <rect width="28.87" height="28.87" fill="url(#a)" rx="6.48" ry="6.48"></rect>
-                                      <g>
-                                          <path fill="#fff" d="M10 5h9c.2.1.5.1.7.2a4.78 4.78 0 0 1 3.8 3.3 8 8 0 0 1 .3 1.5v8.8a6.94 6.94 0 0 1-1.2 3.1 5.51 5.51 0 0 1-4.5 1.9h-7.5a5.49 5.49 0 0 1-3.7-1.2A5.51 5.51 0 0 1 5 18.14v-7a7.57 7.57 0 0 1 .1-1.5 4.9 4.9 0 0 1 3.8-4.3zm-3.1 9.5v3.9a3.42 3.42 0 0 0 3.7 3.7q3.9.15 7.8 0c2.3 0 3.6-1.4 3.7-3.7q.15-3.9 0-7.8a3.52 3.52 0 0 0-3.7-3.7q-3.9-.15-7.8 0a3.42 3.42 0 0 0-3.7 3.7z"></path>
-                                          <path fill="#fff" d="M9.64 14.54a4.91 4.91 0 0 1 4.9-4.9 5 5 0 0 1 4.9 4.9 4.91 4.91 0 0 1-4.9 4.9 5 5 0 0 1-4.9-4.9zm4.9-3.1a3.05 3.05 0 1 0 3 3 3 3 0 0 0-3-3z"></path>
-                                          <path fill="#fff" d="M18.34 9.44a1.16 1.16 0 0 1 1.2-1.2 1.29 1.29 0 0 1 1.2 1.2 1.2 1.2 0 0 1-2.4 0z"></path>
-                                      </g>
-                                  </g>
-                              </g>
-                          </svg>
-                      </a>
-                  </div>
-              </section>
-          </footer>
+  </nav>
+
+  <div class="card-container px-4 text-center">
+    <div class="row p-2">
+      <!-- Pixelerate Card -->
+      <div class="card col-md-6 col-lg-4 col-xl-4 mb-2 p-2 borderless" style="background: transparent">
+        <div class="text-bg-dark" style="padding: 20px; border-radius: 10px">
+          <img src="public/Pixelerate.jpg" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Pixelerate</h5>
+            <p class="card-text">
+              Capture your creativity and storytelling through the lens. Let
+              it speak with clarity, focus, and originality!
+            </p>
+            <a type="button" data-toggle="modal" data-target="#info1Modal" class="btn btn-outline-success">For More
+              Details</a>
+          </div>
+        </div>
       </div>
-      
-      
-          
-      
-      
-                <section style="background-color: rgba(0, 0, 0, 0.75);">
-                  <div class="container-fluid text-center text-md-start" style="padding-top: 25px; padding-bottom: 25px;">
-                      <div class="row text-center">
-                          <div class=" col-sm-12 col-md-6 col-lg-6  mx-auto mb-4" >
-                              <img src="public/refresh logo.png" class="img-fluid" style="width: 220px; height: 300px;">
-                          </div>
-                          
-      
-                          
-      
-                          <div class="col-sm-12 col-md-6 col-lg-6 mx-auto mb-md-0 mb-4" style="margin-top: 25px;">
-                            <h6 class="text-uppercase fw-bold">Contact</h6>
-                            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px">
-                            <p><svg style="width: 20px; height: 20px;" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" id="google-home"><path fill="#4285f4" d="M14.1947,3.7572a2.5909,2.5909,0,0,1,3.6694.0086l10.333,10.401a2.6022,2.6022,0,0,1,.7563,1.8226L28.98,21.98,29,26.3888A2.5983,2.5983,0,0,1,26.405,29H24V17L16,9,12.4734,5.4735Z"></path><path fill="#ea4435" d="M14.1161,3.7658,3.7831,14.1668a2.6022,2.6022,0,0,0-.7563,1.8226L3,21.98,7.98,17l8-8,3.5266-3.5265L17.7855,3.7572A2.5909,2.5909,0,0,0,14.1161,3.7658Z"></path><path fill="#fbc02d" d="M8,24V17L3.02,21.98,3,26.3888A2.5983,2.5983,0,0,0,5.595,29H8Z"></path><rect width="16" height="5" x="8" y="24" fill="#00ac47"></rect></svg> Padi, Chennai, Tamil Nadu 600050</p>
-                            <p><svg style="width: 20px; height: 20px;" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48" id="gmail"><path fill="#4285F4" d="M3.27273 42.0088H10.9091V23.4633L0 15.2815V38.736C0 40.5442 1.46455 42.0088 3.27273 42.0088Z"></path><path fill="#34A853" d="M37.0909 42.0088H44.7273C46.5355 42.0088 48 40.5442 48 38.736V15.2815L37.0909 23.4633V42.0088Z"></path><path fill="#FBBC04" d="M37.0909 9.28155V23.4634L48 15.2815V10.9179C48 6.87336 43.3827 4.56336 40.1455 6.99064L37.0909 9.28155Z"></path><path fill="#EA4335" fill-rule="evenodd" d="M10.9091 23.4633V9.28149L24 19.0997L37.0909 9.28149V23.4633L24 33.2815L10.9091 23.4633Z" clip-rule="evenodd"></path><path fill="#C5221F" d="M0 10.9179V15.2815L10.9091 23.4634V9.28155L7.85455 6.99064C4.61727 4.56336 0 6.87336 0 10.9179Z"></path></svg> stmichaelsyouthfellowship@gmail.com</p>
-                            <p> <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 258"><defs><linearGradient id="logosWhatsappIcon0" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#1faf38"/><stop offset="100%" stop-color="#60d669"/></linearGradient><linearGradient id="logosWhatsappIcon1" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#f9f9f9"/><stop offset="100%" stop-color="#fff"/></linearGradient></defs><path fill="url(#logosWhatsappIcon0)" d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a123 123 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004"/><path fill="url(#logosWhatsappIcon1)" d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416m40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513z"/><path fill="#fff" d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64"/></svg> +91 8015515714 (Jebin J S)</p>
-                            <p> <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 258"><defs><linearGradient id="logosWhatsappIcon0" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#1faf38"/><stop offset="100%" stop-color="#60d669"/></linearGradient><linearGradient id="logosWhatsappIcon1" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#f9f9f9"/><stop offset="100%" stop-color="#fff"/></linearGradient></defs><path fill="url(#logosWhatsappIcon0)" d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a123 123 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004"/><path fill="url(#logosWhatsappIcon1)" d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416m40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513z"/><path fill="#fff" d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64"/></svg> +91 9710539862 (Jeffrey J)</p>
-                           
-                        </div>
-                      </div>
-                  </div>
-              </section>
-      
-              <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.75)">
-                  © 2024 Copyright:
-                  <a class="text-white" href="">St Michaels Youth</a>
-              </div>
-          </footer>
+
+      <!-- Pixelerate Modal -->
+      <div class="modal fade" id="info1Modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLabel">More Information</h5>
+              <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body" style="text-align: left">
+              <strong>GENERAL RULES:</strong>
+              <ol>
+                <li>
+                  Theme should be defined by the photography skills in the
+                  picture.
+                </li>
+                <li>
+                  Behavior Safety: Follow local laws and regulations. No
+                  risky or dangerous behavior to capture photos.
+                </li>
+                <li>
+                  Judging Criteria: Theme, picture quality, focus, exposure,
+                  lighting, explanation, and composition.
+                </li>
+                <li>
+                  Grounds for disqualification - plagiarism, inappropriate
+                  content.
+                </li>
+                <li>Decision of judges/organizers is final.</li>
+              </ol>
+
+              <strong>SUBMISSION REQUIREMENTS:</strong>
+              <ol>
+                <li>Format requirements (JPEG) maximum resolution/size.</li>
+                <li>
+                  Naming, without editing raw images need to be submitted.
+                </li>
+              </ol>
+
+              <strong>1 ENTRY PER CHURCH</strong>
+            </div>
+          </div>
+        </div>
       </div>
-      
-        
-      
-        
-        
-      
-      </body>
-      
-      </html>
+
+      <!-- Spotlight Snippets Card -->
+      <div class="card col-md-6 col-lg-4 col-xl-4 mb-2 p-2 borderless" style="background: transparent">
+        <div class="text-bg-dark" style="padding: 20px; border-radius: 10px">
+          <img src="public/Spotlight Snippets.jpg" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Spotlight Snippets</h5>
+            <p class="card-text">
+              Lights, camera, action! Make your ideas shine in just 60
+              seconds and wow the audience. Let your creativity take the
+              spotlight!
+            </p>
+            <a type="button" data-toggle="modal" data-target="#info2Modal" class="btn btn-outline-success">For More
+              Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spotlight Snippets Modal -->
+      <div class="modal fade" id="info2Modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLabel">More Information</h5>
+              <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body" style="text-align: left">
+              <strong>GENERAL RULES:</strong>
+              <ol>
+                <li>Content must be based on the theme.</li>
+                <li>Do not use movie content or illegitimate jokes.</li>
+                <li>
+                  Judged on storyline, creativity, properties, message,
+                  entertainment, performances, coordination, video, and
+                  audio quality.
+                </li>
+                <li>
+                  Reel must be uploaded to a drive and emailed to
+                  smyf.refresh2k24@gmail.com on or before the date.
+                </li>
+              </ol>
+
+              <strong>CREW:</strong>
+              <ol>
+                <li>Any number of participants can be involved.</li>
+              </ol>
+
+              <strong>SUBMISSION REQUIREMENTS:</strong>
+              <ol>
+                <li>Use portrait mode (9:16).</li>
+                <li>Video can be taken with a mobile phone or DSLR.</li>
+                <li>Maximum runtime of reel: 60 seconds.</li>
+              </ol>
+
+              <strong>1 ENTRY PER CHURCH</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rap the Theme Card -->
+      <div class="card col-md-6 col-lg-4 col-xl-4 mb-2 p-2 borderless" style="background: transparent">
+        <div class="text-bg-dark" style="padding: 20px; border-radius: 10px">
+          <img src="public/RapTheTheme.jpg" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Rap the Theme</h5>
+            <p class="card-text">
+              Drop the beat and bring the heat! Craft a powerful rap around
+              the theme and let your words make an impact.
+            </p>
+            <a type="button" data-toggle="modal" data-target="#info3Modal" class="btn btn-outline-success">For More
+              Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rap the Theme Modal -->
+      <div class="modal fade" id="info3Modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLabel">More Information</h5>
+              <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body" style="text-align: left">
+              <strong>GENERAL RULES:</strong>
+              <ol>
+                <li>Rap must be based on the theme.</li>
+                <li>Be creative and implement your own ideas.</li>
+                <li>Any number of participants can be involved.</li>
+                <li>
+                  Audio and video with a copy of the lyrics must be emailed
+                  to smyf.refresh2k24@gmail.com on or before the date.
+                </li>
+              </ol>
+
+              <strong>TIME LIMIT:</strong>
+              <ol>
+                <li>2 minutes maximum.</li>
+              </ol>
+
+              <strong>SUBMISSION REQUIREMENTS:</strong>
+              <ol>
+                <li>The video resolution must be 1920x1080.</li>
+                <li>Submission must be made in MP4 format.</li>
+              </ol>
+
+              <strong>1 ENTRY PER CHURCH</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card col-md-6 col-lg-4 col-xl-4 mb-2 p-2 borderless" style="background: transparent">
+        <div class="text-bg-dark" style="padding: 20px; border-radius: 10px">
+          <img src="public/Holy Hunch.jpg" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">Holy Hunch</h5>
+            <p class="card-text">
+              Step into a world of mystery, puzzles, riddles, and hidden
+              clues. Only the quickest and sharpest minds will claim the
+              treasure.
+            </p>
+            <a type="button" data-toggle="modal" data-target="#info4Modal" class="btn btn-outline-success">For More
+              Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Holy Hunch Modal -->
+      <div class="modal fade" id="info4Modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLabel">More Information</h5>
+              <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body" style="text-align: left">
+              <strong>GENERAL RULES:</strong><br />
+              <ol>
+                <li>The event will happen in Google Forms.</li>
+                <li>
+                  Each church needs to share one unique email ID and phone
+                  number, which will be used to participate in the event.
+                </li>
+                <li>
+                  Each stage will have clues in the form of text, audio,
+                  video, or a link to crack the correct code and proceed to
+                  the next stage.
+                </li>
+                <li>
+                  Churches will be rewarded based on the number of stages
+                  they complete before the online event closing date.
+                </li>
+                <li>Other details will be communicated shortly.</li>
+              </ol>
+
+              <strong>1 ENTRY PER CHURCH</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-bg-dark">
+    <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
+      <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
+        <div class="me-5">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/p/St-Michaels-Church-Youth-100069615477125/" class="me-4">
+            <svg style="width: 30px; height: 30px" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+              viewBox="0 0 24 24" id="facebook-logo">
+              <path fill="#3b5999"
+                d="m21 0h-18c-1.655 0-3 1.345-3 3v18c0 1.654 1.345 3 3 3h18c1.654 0 3-1.346 3-3v-18c0-1.655-1.346-3-3-3z">
+              </path>
+              <path fill="#334d85" d="m12 0h-9c-1.655 0-3 1.345-3 3v18c0 1.654 1.345 3 3 3h9z"></path>
+              <path fill="#fff"
+                d="m16.5 12v-3c0-.828.672-.75 1.5-.75h1.5v-3.75h-3c-2.486 0-4.5 2.014-4.5 4.5v3h-3v3.75h3v8.25h4.5v-8.25h2.25l1.5-3.75z">
+              </path>
+              <path fill="#dedede" d="m14.263 5.094c-1.353.777-2.263 2.235-2.263 3.906v3h-3v3.75h3v8.25h2.263z"></path>
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/@refresh9115" class="me-4">
+            <svg style="width: 30px; height: 30px" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+              viewBox="0 0 24 24" id="youtube">
+              <path fill="#e53935"
+                d="m23.469 5.929.03.196c-.497-1.764-2.189-2.178-2.089-2.117-2.435-.661-16.298-.686-18.799 0-1.741.504-2.147 2.217-2.089 2.117-.678 3.539-.726 7.916.03 11.947l-.03-.198c.497 1.765 2.189 2.178 2.089 2.117 2.468.672 16.296.673 18.799 0 1.016-.294 1.799-1.088 2.084-2.096.292-2.119.506-2.616.506-6.12 0-1.997-.182-3.951-.531-5.846z">
+              </path>
+              <path fill="#c7322e"
+                d="m11.979 3.5c-.526 0-7.55.009-9.368.508-1.741.504-2.147 2.217-2.089 2.117-.666 3.477-.741 7.835.03 11.947l-.03-.198c.497 1.765 2.189 2.178 2.089 2.117 1.827.498 9.072.509 9.389.509v-17c-.005 0-.012 0-.021 0z">
+              </path>
+              <path fill="#fff" d="m9.607 15.651v-7.293l6.267 3.652z"></path>
+              <path fill="#dedede" d="m15.856 12h-6.249v3.651l6.267-3.641z"></path>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/smyf_refresh/" class="me-4">
+            <svg style="width: 30px; height: 30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.87 28.87"
+              id="instagram">
+              <defs>
+                <linearGradient id="a" x1="-1.84" x2="32.16" y1="30.47" y2="-3.03" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#fed576"></stop>
+                  <stop offset=".26" stop-color="#f47133"></stop>
+                  <stop offset=".61" stop-color="#bc3081"></stop>
+                  <stop offset="1" stop-color="#4c63d2"></stop>
+                </linearGradient>
+              </defs>
+              <g>
+                <g>
+                  <rect width="28.87" height="28.87" fill="url(#a)" rx="6.48" ry="6.48"></rect>
+                  <g>
+                    <path fill="#fff"
+                      d="M10 5h9c.2.1.5.1.7.2a4.78 4.78 0 0 1 3.8 3.3 8 8 0 0 1 .3 1.5v8.8a6.94 6.94 0 0 1-1.2 3.1 5.51 5.51 0 0 1-4.5 1.9h-7.5a5.49 5.49 0 0 1-3.7-1.2A5.51 5.51 0 0 1 5 18.14v-7a7.57 7.57 0 0 1 .1-1.5 4.9 4.9 0 0 1 3.8-4.3zm-3.1 9.5v3.9a3.42 3.42 0 0 0 3.7 3.7q3.9.15 7.8 0c2.3 0 3.6-1.4 3.7-3.7q.15-3.9 0-7.8a3.52 3.52 0 0 0-3.7-3.7q-3.9-.15-7.8 0a3.42 3.42 0 0 0-3.7 3.7z">
+                    </path>
+                    <path fill="#fff"
+                      d="M9.64 14.54a4.91 4.91 0 0 1 4.9-4.9 5 5 0 0 1 4.9 4.9 4.91 4.91 0 0 1-4.9 4.9 5 5 0 0 1-4.9-4.9zm4.9-3.1a3.05 3.05 0 1 0 3 3 3 3 0 0 0-3-3z">
+                    </path>
+                    <path fill="#fff"
+                      d="M18.34 9.44a1.16 1.16 0 0 1 1.2-1.2 1.29 1.29 0 0 1 1.2 1.2 1.2 1.2 0 0 1-2.4 0z"></path>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </a>
+        </div>
+      </section>
+    </footer>
+  </div>
+
+  <section style="background-color: rgba(0, 0, 0, 0.75)">
+    <div class="container-fluid text-center text-md-start" style="padding-top: 25px; padding-bottom: 25px">
+      <div class="row text-center">
+        <div class="col-sm-12 col-md-6 col-lg-6 mx-auto mb-4">
+          <img src="public/refresh logo.png" class="img-fluid" style="width: 220px; height: 300px" />
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-6 mx-auto mb-md-0 mb-4" style="margin-top: 25px">
+          <h6 class="text-uppercase fw-bold">Contact</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+          <p>
+            <svg style="width: 20px; height: 20px" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+              viewBox="0 0 32 32" id="google-home">
+              <path fill="#4285f4"
+                d="M14.1947,3.7572a2.5909,2.5909,0,0,1,3.6694.0086l10.333,10.401a2.6022,2.6022,0,0,1,.7563,1.8226L28.98,21.98,29,26.3888A2.5983,2.5983,0,0,1,26.405,29H24V17L16,9,12.4734,5.4735Z">
+              </path>
+              <path fill="#ea4435"
+                d="M14.1161,3.7658,3.7831,14.1668a2.6022,2.6022,0,0,0-.7563,1.8226L3,21.98,7.98,17l8-8,3.5266-3.5265L17.7855,3.7572A2.5909,2.5909,0,0,0,14.1161,3.7658Z">
+              </path>
+              <path fill="#fbc02d" d="M8,24V17L3.02,21.98,3,26.3888A2.5983,2.5983,0,0,0,5.595,29H8Z"></path>
+              <rect width="16" height="5" x="8" y="24" fill="#00ac47"></rect>
+            </svg>
+            Padi, Chennai, Tamil Nadu 600050
+          </p>
+          <p>
+            <svg style="width: 20px; height: 20px" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none"
+              viewBox="0 0 48 48" id="gmail">
+              <path fill="#4285F4"
+                d="M3.27273 42.0088H10.9091V23.4633L0 15.2815V38.736C0 40.5442 1.46455 42.0088 3.27273 42.0088Z"></path>
+              <path fill="#34A853"
+                d="M37.0909 42.0088H44.7273C46.5355 42.0088 48 40.5442 48 38.736V15.2815L37.0909 23.4633V42.0088Z">
+              </path>
+              <path fill="#FBBC04"
+                d="M37.0909 9.28155V23.4634L48 15.2815V10.9179C48 6.87336 43.3827 4.56336 40.1455 6.99064L37.0909 9.28155Z">
+              </path>
+              <path fill="#EA4335" fill-rule="evenodd"
+                d="M10.9091 23.4633V9.28149L24 19.0997L37.0909 9.28149V23.4633L24 33.2815L10.9091 23.4633Z"
+                clip-rule="evenodd"></path>
+              <path fill="#C5221F"
+                d="M0 10.9179V15.2815L10.9091 23.4634V9.28155L7.85455 6.99064C4.61727 4.56336 0 6.87336 0 10.9179Z">
+              </path>
+            </svg>
+            stmichaelsyouthfellowship@gmail.com
+          </p>
+          <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 258">
+              <defs>
+                <linearGradient id="logosWhatsappIcon0" x1="50%" x2="50%" y1="100%" y2="0%">
+                  <stop offset="0%" stop-color="#1faf38" />
+                  <stop offset="100%" stop-color="#60d669" />
+                </linearGradient>
+                <linearGradient id="logosWhatsappIcon1" x1="50%" x2="50%" y1="100%" y2="0%">
+                  <stop offset="0%" stop-color="#f9f9f9" />
+                  <stop offset="100%" stop-color="#fff" />
+                </linearGradient>
+              </defs>
+              <path fill="url(#logosWhatsappIcon0)"
+                d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a123 123 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004" />
+              <path fill="url(#logosWhatsappIcon1)"
+                d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416m40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513z" />
+              <path fill="#fff"
+                d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64" />
+            </svg>
+            +91 8015515714 (Jebin J S)
+          </p>
+          <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 258">
+              <defs>
+                <linearGradient id="logosWhatsappIcon0" x1="50%" x2="50%" y1="100%" y2="0%">
+                  <stop offset="0%" stop-color="#1faf38" />
+                  <stop offset="100%" stop-color="#60d669" />
+                </linearGradient>
+                <linearGradient id="logosWhatsappIcon1" x1="50%" x2="50%" y1="100%" y2="0%">
+                  <stop offset="0%" stop-color="#f9f9f9" />
+                  <stop offset="100%" stop-color="#fff" />
+                </linearGradient>
+              </defs>
+              <path fill="url(#logosWhatsappIcon0)"
+                d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a123 123 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004" />
+              <path fill="url(#logosWhatsappIcon1)"
+                d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416m40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513z" />
+              <path fill="#fff"
+                d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64" />
+            </svg>
+            +91 9710539862 (Jeffrey J)
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.75)">
+    © 2024 Copyright:
+    <a class="text-white" href="">St Michaels Youth</a>
+  </div>
+  <script>
+    // Initialize all modals
+    var modals = document.querySelectorAll('.modal');
+    modals.forEach(function(modal) {
+        new bootstrap.Modal(modal);
+    });
+
+    // Add click event listeners to all "For More Details" buttons
+    var detailButtons = document.querySelectorAll('[data-toggle="modal"]');
+    detailButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            var targetModal = document.querySelector(this.getAttribute('data-target'));
+            var modal = bootstrap.Modal.getInstance(targetModal);
+            modal.show();
+        });
+    });
+  </script>
+</body>
+
+</html>
+
+</html>
